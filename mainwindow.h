@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+protected:
+    void timerEvent(QTimerEvent*);
 };
 
 #endif // MAINWINDOW_H
