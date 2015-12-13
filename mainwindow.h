@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class CameraDevice;
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,9 +19,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    CameraDevice *camera;
 
 protected:
     void timerEvent(QTimerEvent*);
+
+private slots:
+    void on_actionOpen_camera_triggered();
+    void on_actionClose_camera_triggered();
 };
 
 #endif // MAINWINDOW_H
